@@ -1,0 +1,26 @@
+@mixin font($font-style, $font-weight, $font-size, $line-height, $font-color) {
+	font-style: $font-style;
+	font-weight: $font-weight;
+	font-size: $font-size;
+	line-height: $line-height;
+	color: $font-color;
+}
+
+@mixin top-center {
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+@mixin reset-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+@mixin grad-blue {
+	background: linear-gradient(180deg, #4F78D7 0%, #1F4395 100%);
+}
+
+@mixin grad-blue-reverse {
+	background: linear-gradient(180deg, #1F4395 0%, #4F78D7 100%);
+}
