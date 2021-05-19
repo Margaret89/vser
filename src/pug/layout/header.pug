@@ -43,12 +43,12 @@ header.header
 							ul.main-menu__list
 								-
 									var list=[
-										'О нас',
-										'Наши работы',
-										'Партнеры',
-										'Контакты',
+										{text:'О нас', status:'active'},
+										{text:'Наши работы'},
+										{text:'Партнеры'},
+										{text:'Контакты'},
 									]
 
 								each item in list
-									li.main-menu__item
-										a(href="#").main-menu__link= item
+									li.main-menu__item(class=item.status?'active':'')
+										a(href="#").main-menu__link= item.text

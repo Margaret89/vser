@@ -123,8 +123,13 @@
 		transition: background 0.2s ease 0s;
 	}
 
-	&__cat:hover{color: $color-blue;}
+	&__cat:hover,
+	&__cat.active{
+		color: $color-blue;
+	}
 
+	&__cat.active &__cat-icon,
+	&__cat.active &__cat-icon::after,
 	&__cat:hover &__cat-icon,
 	&__cat:hover &__cat-icon::after{
 		background: $color-blue;
@@ -149,6 +154,10 @@
 		transition: color 0.2s ease 0s;
 	}
 
-	&__link:hover{color: $color-blue;}
+	&__link:hover,
+	&__item.active &__link{
+		color: $color-blue;
+	}
+
 	&__item:not(:last-child){margin-right: 60px;}
 }
