@@ -1,4 +1,54 @@
 header.header
-	.container
-		.row
-			.col-12 header
+	.header-top
+		.container
+			.row
+				.col-12
+					.header-top__content
+						.header-top__logo
+							a(href="/")
+								img(src="assets/img/logo.png", alt="")
+
+						.header-top__info
+							.header-top__address 690091, г. Владивосток, ул. Западная 29 ст.2, оф. 416
+							
+							.header-time
+								.header-time__item Режим работы: с 8:00 до 17:00
+								.header-time__item Обед: с 12:00 до 13:00
+
+						.header-soc
+							a(href="#").header-soc__item
+								+svg('ic-instagram','ic-instagram', '18', '18')
+
+						.header-mail
+							.header-mail__icon
+								+svg('ic-email','ic-email', '17', '13')
+							a(href="mailto:vser@vser.ru").header-mail__text vser@vser.ru
+
+
+						.header-top__contacts
+							a(href="tel:+74232098541") +7(423)209-85-41
+							br
+							a(href="tel:+74232392540") +7(423)239-25-40
+
+	.header-nav
+		.container
+			.row
+				.col-12
+					.header-nav__content
+						a(href="#").header-nav__cat
+							span.header-nav__cat-icon
+							|Наши услуги
+
+						nav.main-menu
+							ul.main-menu__list
+								-
+									var list=[
+										'О нас',
+										'Наши работы',
+										'Партнеры',
+										'Контакты',
+									]
+
+								each item in list
+									li.main-menu__item
+										a(href="#").main-menu__link= item

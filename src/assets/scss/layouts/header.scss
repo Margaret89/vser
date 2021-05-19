@@ -1,0 +1,154 @@
+.header-top{
+	padding: 16px 0;
+	border-bottom: 1px solid #e1e1e1;
+
+	&__content{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__logo{margin-right: 15px;}
+	&__info{margin: 0 15px;}
+
+	&__address{
+		@include font(normal, normal, 1.5rem, 1.2, #373737);
+	}
+
+	&__contacts{
+		@include font(normal, normal, 2.1rem, 1.6, #373737);
+		margin-left: 15px;
+
+		a{
+			color: #373737;
+			text-decoration: none;
+			transition: color 0.2s ease 0s;
+		}
+	}
+
+	&__contacts a:hover{color: $color-blue;}
+}
+
+.header-time{
+	display: flex;
+	@include font(normal, normal, 1.5rem, 1.2, #696969);
+	margin-top: 15px;
+
+	&:first-child{margin-top: 0;}
+	&__item:not(:last-child){margin-right: 28px;}
+}
+
+.header-soc{
+	display: flex;
+	margin: 0 15px;
+
+	&__item{
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 50px;
+		height: 50px;
+		border: 1px solid $color-light-blue;
+		border-radius: 50%;
+		text-decoration: none;
+
+		.icon{
+			fill: $color-blue;
+			transition: all 0.2s ease 0s;
+		}
+	}
+
+	&__item:not(:last-child){margin-right: 10px;}
+	&__item:hover .icon{opacity: 0.7;}
+}
+
+.header-mail{
+	display: inline-flex;
+	align-items: center;
+	margin: 0 15px;
+
+	&__icon{
+		flex: 0 0 17px;
+		margin-right: 18px;
+
+		.icon{fill: $color-blue}
+	}
+
+	&__text{
+		@include font(normal, normal, 1.6rem, 1.2, #2c2c2c);
+		text-decoration: none;
+		transition: color 0.2s ease 0s;
+	}
+
+	&__text:hover{color: $color-blue;}
+}
+
+.header-nav{
+	padding: 20px 0;
+	
+	&__content{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__cat{
+		display: inline-flex;
+		align-items: center;
+		@include font(normal, normal, 1.7rem, 1.2, #000);
+		transition: color 0.2s ease 0s;
+		margin-right: 15px;
+	}
+
+	&__cat-icon{
+		display: inline-block;
+		width: 40px;
+		height: 2px;
+		background: #000;
+		margin-right: 35px;
+		position: relative;
+		margin-bottom: 10px;
+		transition: background 0.2s ease 0s;
+	}
+
+	&__cat-icon::after{
+		content: '';
+		display: inline-block;
+		width: calc(100% - 15px);
+		height: 2px;
+		background: #000;
+		position: absolute;
+		bottom: -10px;
+		left: 0;
+		transition: background 0.2s ease 0s;
+	}
+
+	&__cat:hover{color: $color-blue;}
+
+	&__cat:hover &__cat-icon,
+	&__cat:hover &__cat-icon::after{
+		background: $color-blue;
+	}
+}
+
+.main-menu{
+	&__list,
+	&__item{
+		@include reset-list;
+	}
+
+	&__list{
+		display: flex;
+		align-items: center;
+	}
+
+	&__item,
+	&__link{
+		@include font(normal, normal, 1.7rem, 1.2, #000);
+		text-decoration: none;
+		transition: color 0.2s ease 0s;
+	}
+
+	&__link:hover{color: $color-blue;}
+	&__item:not(:last-child){margin-right: 60px;}
+}

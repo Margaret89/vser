@@ -8,24 +8,22 @@ $font-site:  'PT Sans', Arial, sans-serif;
 // Site
 $color-text: #464646;
 $color-blue: #1f4395;
+$color-light-blue: #c7d5f4;
 $color-grey: #f5f5f5;
 
 
 // Grid
-// $grid-breakpoints: (
-//   xs: 0,
-//   sm: 576px,
-//   md: 768px,
-//   lg: 992px,
-//   xl: 1200px
-// ) !default;
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1230px
+) !default;
 
-// $container-max-widths: (
-//   sm: 540px,
-//   md: 720px,
-//   lg: 960px,
-//   xl: 1140px
-// ) !default;
-
-
-// $grid-columns: 16;
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1170px
+) !default;
