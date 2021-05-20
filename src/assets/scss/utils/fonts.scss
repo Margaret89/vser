@@ -42,3 +42,37 @@
 	font-weight: bold;
 	font-style: italic;
 }
+
+// Ubuntu
+@font-face {
+	font-family: 'Ubuntu';
+	src: url('#{$path-fonts}/Ubuntu/Ubuntu-Light.eot');
+	src: local('Ubuntu Light'), local('Ubuntu-Light'),
+		url('#{$path-fonts}/Ubuntu/Ubuntu-Light.eot?#iefix') format('embedded-opentype'),
+		url('#{$path-fonts}/Ubuntu/Ubuntu-Light.woff') format('woff'),
+		url('#{$path-fonts}/Ubuntu/Ubuntu-Light.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Ubuntu';
+	src: url('#{$path-fonts}/Ubuntu/Ubuntu-LightItalic.eot');
+	src: local('Ubuntu Light Italic'), local('Ubuntu-LightItalic'),
+		url('#{$path-fonts}/Ubuntu/Ubuntu-LightItalic.eot?#iefix') format('embedded-opentype'),
+		url('#{$path-fonts}/Ubuntu/Ubuntu-LightItalic.woff') format('woff'),
+		url('#{$path-fonts}/Ubuntu/Ubuntu-LightItalic.ttf') format('truetype');
+	font-weight: 300;
+	font-style: italic;
+}
+
+// @font-face {
+// 	font-family: 'Ubuntu';
+// 	src: url('#{$path-fonts}/Ubuntu/Ubuntu-Regular.eot');
+// 	src: local('Ubuntu Regular'), local('Ubuntu-Regular'),
+// 		url('#{$path-fonts}/Ubuntu/Ubuntu-Regular.eot?#iefix') format('embedded-opentype'),
+// 		url('#{$path-fonts}/Ubuntu/Ubuntu-Regular.woff') format('woff'),
+// 		url('#{$path-fonts}/Ubuntu/Ubuntu-Regular.ttf') format('truetype');
+// 	font-weight: normal;
+// 	font-style: normal;
+// }
