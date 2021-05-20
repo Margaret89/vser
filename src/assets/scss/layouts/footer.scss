@@ -1,0 +1,99 @@
+.footer{
+	background: $color-blue;
+	padding: 50px 0;
+
+	&__copyright{
+		@include font(normal, normal, 1.6rem, 1.2, #c4cfea);
+		margin-top: 85px;
+	}
+
+	&__info{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		border-top: 1px solid #3d61b4;
+		margin-top: 30px;
+		padding: 20px 0;
+	}
+}
+
+.footer-menu{
+	&__list,
+	&__item{
+		@include reset-list;
+	}
+
+	&__list{
+		column-count: 3;
+		column-gap: 30px;
+	}
+
+	&__item:not(:last-child){margin-bottom: 40px;}
+
+	&__link{
+		@include font(normal, normal, 1.8rem, 1.2, #fff);
+		text-decoration: none;
+	}
+
+	&__link:hover{text-decoration: underline;}
+
+	&__sub{margin-top: 24px;}
+	&__sub-item:not(:last-child){margin-bottom: 5px;}
+
+	&__sub-link{
+		@include font(normal, normal, 1.6rem, 1.2, #c4cfea);
+		text-decoration: none;
+		transition: color 0.2s ease 0s;
+	}
+
+	&__sub-link:hover{color: #fff;}
+}
+
+.footer-contact{
+	display: flex;
+	align-items: center;
+
+	&__item{
+		display: inline-flex;
+		align-items: center;
+	}
+
+	&__item:not(:last-child){margin-right: 85px;}
+
+	&__icon{
+		flex: 0 0 20px;
+		text-align: center;
+		margin-right: 26px;
+
+		.icon{fill: #fff;}
+	}
+
+	&__text{
+		@include font(normal, normal, 1.8rem, 1.4, #fff);
+
+		a{
+			color: #fff;
+			text-decoration: none;
+		}
+
+		a:hover{text-decoration: underline;}
+	}
+
+	&__address{width: 450px;}
+}
+
+.footer-soc{
+	display: inline-flex;
+	align-items: center;
+
+	&__item{
+		text-decoration: none;
+
+		.icon{
+			fill: #8093C3;
+			transition: fill 0.2s ease 0s;
+		}
+	}
+
+	&__item:hover .icon{fill: #fff;}
+}
