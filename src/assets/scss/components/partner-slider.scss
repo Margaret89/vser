@@ -46,3 +46,49 @@
 
 	.slick-slide{margin: 0 15px;}
 }
+
+@media (max-width: 767px) {
+	.partner-slider-wrap{
+		margin: 70px 0 40px;
+
+		&__top,
+		&__info{
+			display: block;
+		}
+
+		&__info{
+			margin-right: 0;
+
+			h2, .h2{margin-right: 0;}
+		}
+
+		&__btn{
+			margin-top: 42px;
+			text-align: center;
+
+			.btn{
+				width: 100%;
+				max-width: 280px;
+			}
+		}
+	}
+
+	.partner-slider{
+		display: flex;
+		flex-wrap: wrap;
+		margin-left: -10px;
+		margin-right: -10px;
+
+		&__item{
+			display: none;
+			width: calc(50% - 20px);
+			margin: 10px;
+		}
+
+		&__item:nth-child(-n+4){display: block;}
+		&__img{height: 80px;}
+		&__title{font-size: 1.5rem;}
+	}
+	
+	
+}

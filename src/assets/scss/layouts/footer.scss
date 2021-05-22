@@ -102,3 +102,54 @@
 
 	&__item:hover .icon{fill: #fff;}
 }
+
+@media (max-width: 1229px) {
+	.footer-contact{
+		&__address{width: auto;}
+	}
+}
+
+@media (max-width: 991px) {
+	.footer-menu{
+		&__sub-item{padding-left: 0;}
+	}
+
+	.footer-contact{
+		&__item:not(:last-child){margin-right: 30px;}
+		&__icon{margin-right: 20px;}
+		&__address{max-width: 250px;}
+	}
+}
+
+@media (max-width: 767px) {
+	.footer{
+		padding: 35px 0;
+
+		&__copyright{
+			font-size: 1.3rem;
+			margin-top: 0;
+		}
+
+		&__info{
+			padding: 0;
+			border-top: 0;
+			margin-top: 45px;
+		}
+	}
+
+	.footer-contact{
+		display: block;
+
+		&__text{
+			font-size: 1.5rem;
+			line-height: 1.53;
+		}
+
+		&__item{width: 100%;}
+
+		&__item:not(:last-child){
+			margin-right: 0;
+			margin-bottom: 30px;
+		}
+	}
+}

@@ -2,7 +2,7 @@ footer.footer
 	.container
 		.row
 			.col-12
-				nav.footer-menu
+				nav.footer-menu.d-none.d-md-block
 					ul.footer-menu__list
 						-
 							var list=[
@@ -84,6 +84,6 @@ footer.footer
 							.footer-contact__text
 								.footer-contact__address 690090, г. Владивосток, ул. Западная 29 ст.2, оф.&nbsp;416
 
-					.footer-soc
+					.footer-soc.d-none.d-md-inline-flex
 						a(href="#").footer-soc__item
 							+svg('ic-instagram','ic-instagram', '21', '21')

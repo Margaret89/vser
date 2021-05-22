@@ -1,0 +1,48 @@
+/*-------------- hamburger -----------------*/
+.ic-hamburger {
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	width: 32px;
+	height: 18px;
+	font-size: 0;
+	text-indent: -9999px;
+	appearance: none;
+	box-shadow: none;
+	border-radius: none;
+	border: none;
+	cursor: pointer;
+	transition: background 0.3s;
+
+	&:focus{outline: none;}
+	
+	span {
+		display: block;
+		height: 2px;
+		position: absolute;
+		top: 8px;
+		left: 0;
+		right: 0px;
+		background: #000;
+	}
+	
+	 span::before,
+	 span::after {
+		content: "";
+		position: absolute;
+		display: block;
+		right: 0;
+		height: 2px;
+		background-color: #000;
+		transition: width 0.2s ease 0s;
+	}
+	
+	span::before {width: 100%; top: -8px;}
+	span::after {width: calc(100% - 12px); bottom: -8px;}
+	
+	&.active span::before {width: calc(100% - 12px);}
+	&.active span::after {width: 100%;}
+}

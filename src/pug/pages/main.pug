@@ -9,7 +9,7 @@ block content
 
 		.container
 			.row
-				.col-6
+				.col-md-6
 					.top-block__info
 						.top-block__title Строительство, Реконструкция и Ремонт
 
@@ -21,14 +21,17 @@ block content
 							
 	section.about
 		.container
-			.row
-				.col-6
+			.row.d-md-none
+				.col-12
 					h2 О нас
+			.row
+				.col-md-6.order-2.order-md-1
+					h2.d-none.d-md-block О нас
 
 					p Основной деятельностью ООО «ВСЭР» является выполнение работ по Строительству, Реконструкции и Ремонту объектов энергетики, капитального строительства, 
 					p Мы — динамично развивающееся компания с высококвалифицированным персоналом. Располагаем производственными участками в Приморском и Камчатском краях.
 
-				.col-6
+				.col-md-6.order-1.order-md-2
 					img(src="assets/img/about.jpg", alt="")
 
 	section.services-slider-wrap.bg-grad-blue
@@ -89,6 +92,10 @@ block content
 									each sub in item.sub
 										li= sub
 
+					.services-slider-wrap__btn.d-md-none
+						a.btn.btn_border.btn_white.btn_small(href='#')
+							span Показать все услуги
+
 	section.works-slider-wrap
 		.container
 			.row
@@ -97,11 +104,11 @@ block content
 						.works-slider-wrap__info
 							h2 Выполненные работы
 
-							a.btn.btn_border.btn_small(href='#')
+							a.btn.btn_border.btn_small(href='#').d-none.d-md-inline-block
 								span Все работы
 
 						.slider-nav
-							.slider-dots.js-works-slider-dots
+							.slider-dots.js-works-slider-dots.d-none.d-lg-block
 							.slider-arrows.js-works-slider-arr
 
 
@@ -125,6 +132,10 @@ block content
 								
 								.works-slider__popup
 									.works-slider__title= item.title
+
+					.works-slider-wrap__btn.d-md-none
+						a.btn.btn_border.btn_small(href='#')
+							span Все работы
 					
 	section.partner-slider-wrap
 		.container
@@ -135,7 +146,7 @@ block content
 							h2 Наши партнеры
 
 						.slider-nav
-							.slider-dots.js-partner-slider-dots
+							.slider-dots.js-partner-slider-dots.d-none.d-lg-block
 							.slider-arrows.js-partner-slider-arr
 
 
@@ -160,6 +171,10 @@ block content
 									img(src="assets/img/"+item.img, alt="")
 								
 								.partner-slider__title= item.title
+
+					.partner-slider-wrap__btn.d-md-none
+						a.btn.btn_border.btn_small(href='#')
+							span Показать больше партнеров
 	
 	section.map-block.last-elem
 		script(src='http://api-maps.yandex.ru/2.1/?lang=ru_RU' type='text/javascript')

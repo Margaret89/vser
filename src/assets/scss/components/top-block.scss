@@ -37,3 +37,45 @@
 
 	&__btn{margin-top: 65px;}
 }
+
+@media (max-width: 991px) {
+	.top-block{
+		&__title{font-size: 4rem;}
+	}
+}
+
+@media (max-width: 767px) {
+	.top-block{
+		margin-bottom: 40px;
+		
+		&__img{
+			width: 100%;
+			left: 0;
+			opacity: 0.2;
+		}
+
+		&__info{
+			min-height: auto;
+			padding: 43px 18px 70px;
+		}
+
+		&__title{font-size: 3.2rem;}
+
+		&__text{
+			font-size: 1.6rem;
+			line-height: 1.4;
+			margin-top: 35px;
+		}
+
+		&__btn{
+			margin-top: 60px;
+
+			.btn{
+				display: inline-flex;
+				align-items: center;
+				white-space: normal;
+				line-height: 1.2;
+			}
+		}
+	}
+}

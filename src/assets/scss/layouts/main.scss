@@ -9,6 +9,12 @@ body{
 
 body{font-size: 1.6rem;}
 
+body.no-scroll{
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+}
+
 *,
 *:before,
 *:after {
@@ -117,6 +123,7 @@ button.btn{
 	@include grad-blue;
 	@include font(normal, normal, 1.8rem, 5.8rem, #fff);
 	letter-spacing: 1px;
+	white-space: nowrap;
 	text-decoration: underline;
 	text-align: center;
 	padding: 0 35px;
@@ -143,7 +150,6 @@ button.btn_border{
 .btn_border:hover,
 input[type="submit"].btn_border:hover,
 button.btn_border:hover{
-	line-height: 6rem;
 	border: 0;
 	@include grad-blue;
 }
@@ -180,9 +186,10 @@ button.btn_white:hover{
 .btn_border.btn_white,
 input[type="submit"].btn_border.btn_white,
 button.btn_border.btn_white{
+	color: #fff;
+	text-decoration: none;
 	background: transparent;
 	border: 1px solid #537cda;
-	color: #fff;
 }
 
 .btn_border.btn_white:hover,
@@ -241,4 +248,54 @@ button.btn_border.btn_white:hover{
 
 	h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5{color: #fff;}
 	ul li::before{background: #fff;}
+}
+
+@media (max-width: 991px) {
+	.btn_big,
+	input[type="submit"].btn_big,
+	button.btn_big{
+		padding: 0 20px;
+	}
+}
+
+@media (max-width: 767px) {
+	.container,
+	.container-sm{
+		max-width: 100%!important;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
+	body{
+		font-size: 1.5rem;
+		line-height: 1.53;
+	}
+
+	.btn,
+	input[type="submit"].btn,
+	button.btn{
+		font-size: 1.6rem;
+		padding: 0 15px;
+	}
+
+	h1,.h1{
+		font-size: 3.2rem;
+		margin-bottom: 3rem;
+	}
+
+	h2,.h2{
+		font-size: 2.4rem;
+		text-align: center;
+		margin-bottom: 2.6rem;
+	}
+
+	h3,.h3{font-size: 2rem;}
+	h4,.h4{font-size: 1.8rem;}
+	h5,.h5{font-size: 1.6rem;}
+
+	p{margin-bottom: 2.5rem;}
+
+	main{padding-bottom: 40px;}	
+	.last-elem{margin-bottom: -40px;}
+	
 }

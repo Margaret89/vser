@@ -29,3 +29,15 @@
 
 	&__content-item{display: none;}
 }
+
+@media (max-width: 767px) {
+	.tabs-page{
+		&__list{margin-bottom: 42px;}
+		
+		&__item{
+			font-size: 1.5rem;
+			line-height: 1.53;
+			padding: 11px 25px;
+		}
+	}
+}

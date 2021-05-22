@@ -30,3 +30,44 @@
 		&__item{width: 50%;}
 	}
 }
+
+@media (max-width: 991px) {
+	.map-block{
+		display: flex;
+		flex-direction: column-reverse;
+		padding: 0;
+
+		&__content{
+			height: auto;
+			position: static;
+		}
+
+		&__info{
+			padding: 0;
+			margin-bottom: 40px;
+		}
+
+		.map{
+			min-height: 360px;
+			height: 360px;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.map-block{
+		margin-top: 80px;
+
+		&__info{
+			h3, .h3{
+				font-size: 2.4rem;
+				text-align: center;
+			}
+		}
+
+		.tabs-page{
+			&__list{display: block;}
+			&__item{width: 100%;}
+		}
+	}
+}

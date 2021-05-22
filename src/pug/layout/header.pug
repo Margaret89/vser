@@ -8,33 +8,40 @@ header.header
 							a(href="/")
 								img(src="assets/img/logo.png", alt="")
 
-						.header-top__info
+						.header-top__info.js-add-mm(data-order="4")
 							.header-top__address 690091, г. Владивосток, ул. Западная 29 ст.2, оф. 416
 							
 							.header-time
 								.header-time__item Режим работы: с 8:00 до 17:00
 								.header-time__item Обед: с 12:00 до 13:00
 
-						.header-soc
+						.header-soc.d-none.d-lg-inline-flex
 							a(href="#").header-soc__item
 								+svg('ic-instagram','ic-instagram', '18', '18')
 
-						.header-mail
+						.header-mail.js-add-mm(data-order="2")
 							.header-mail__icon
 								+svg('ic-email','ic-email', '17', '13')
 							a(href="mailto:vser@vser.ru").header-mail__text vser@vser.ru
 
 
-						.header-top__contacts
-							a(href="tel:+74232098541") +7(423)209-85-41
-							br
-							a(href="tel:+74232392540") +7(423)239-25-40
+						.header-contacts.js-add-mm(data-order="3")
+							.header-contacts__icon.d-lg-none
+								+svg('ic-call','ic-call', '15', '15')
 
-	.header-nav
+							.header-contacts__text
+								a(href="tel:+74232098541") +7(423)209-85-41
+								br
+								a(href="tel:+74232392540") +7(423)239-25-40
+
+						span.ic-hamburger.js-btn-menu.d-lg-none
+							span
+
+	.header-nav.d-none.d-lg-block
 		.container
 			.row
 				.col-12
-					.header-nav__content
+					.header-nav__content.js-add-mm(data-order="1")
 						a(href="#").header-nav__cat
 							span.header-nav__cat-icon
 							|Наши услуги
@@ -52,3 +59,24 @@ header.header
 								each item in list
 									li.main-menu__item(class=item.status?'active':'')
 										a(href="#").main-menu__link= item.text
+
+	.header-mob-contact.d-lg-none
+		.container
+			.row
+				.col-12
+					.header-mob-contact__content
+						.header-mob-contact__item
+							.header-mob-contact__text
+								a(href="tel:+74232098541") +7(423)209-85-41
+
+						.header-mob-contact__item
+							.header-mob-contact__icon
+								+svg('ic-email','ic-email', '17', '13')
+							.header-mob-contact__text
+								a(href="mailto:vser@vser.ru") vser@vser.ru
+
+	.mobile-menu.js-mobile-menu.d-lg-none
+		.container
+			.row
+				.col-12
+					.mobile-menu__content.js-mobile-menu-content
