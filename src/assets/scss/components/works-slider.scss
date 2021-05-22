@@ -1,0 +1,62 @@
+/*-------------- works-slider -----------------*/
+.works-slider-wrap{
+	margin: 98px 0 80px;
+
+	&__top{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 42px;
+	}
+
+	&__info{
+		display: flex;
+		align-items: center;
+		margin-right: 20px;
+
+		h2, .h2{
+			margin-right: 55px;
+			margin-bottom: 0;
+		}
+	}
+}
+
+.works-slider{
+	display: none;
+
+	&.slick-initialized{display: block;}
+	
+	&__item{
+		position: relative;
+		overflow: hidden;
+		text-decoration: none;
+
+		img{width: 100%;}
+	}
+
+	&__popup{
+		display: flex;
+		align-items: flex-end;
+		width: 100%;
+		height: 100%;
+		padding: 47px;
+		background: rgba(0,0,0,0.635);
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		scale: 1.05;
+		opacity: 0;
+		transition: all 0.2s ease 0s;
+	}
+
+	&__title{
+		font-family: $font-ubuntu;
+		@include font(normal, normal, 2.6rem, 1.2, #fff);
+	}
+
+	&__item:hover &__popup{
+		scale: 1;
+		opacity: 1;
+	}
+}

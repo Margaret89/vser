@@ -96,6 +96,7 @@
 		display: inline-flex;
 		align-items: center;
 		@include font(normal, normal, 1.7rem, 1.2, #000);
+		text-decoration: none;
 		transition: color 0.2s ease 0s;
 		margin-right: 15px;
 	}
@@ -141,6 +142,8 @@
 	&__item{
 		@include reset-list;
 	}
+
+	&__item::before{display: none;}
 
 	&__list{
 		display: flex;

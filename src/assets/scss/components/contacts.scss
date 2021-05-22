@@ -1,0 +1,20 @@
+/*-------------- contacts -----------------*/
+.contacts{
+	&__item{display: flex;}
+	&__item:not(:last-child){margin-bottom: 30px;}
+
+	&__icon{
+		flex: 0 0 20px;
+		margin-right: 30px;
+		padding-top: 4px;
+
+		.icon{
+			fill: $color-blue;
+			vertical-align: top
+		}
+	}
+
+	&__text{
+		@include font(normal, normal, 1.8rem, 1.4, $color-text);
+	}
+}

@@ -1,6 +1,3 @@
-// fancybox
-// @import '~@fancyapps/fancybox/dist/jquery.fancybox.css';
-
 @import "utils/vars";
 
 // bootstrap
@@ -11,6 +8,12 @@
 @import "~bootstrap/scss/utilities/display";
 @import "~bootstrap/scss/grid";
 // @import "~bootstrap/scss/modal";
+
+// slick
+@import '~slick-slider/slick/slick.css';
+
+// fancybox
+// @import '~@fancyapps/fancybox/dist/jquery.fancybox.css';
 
 // Наш сайт
 // @import "utils/libs";

@@ -19,8 +19,12 @@ body{font-size: 1.6rem;}
 
 img{max-width: 100%;}
 
-a{color: $color-blue;}
-a:focus{text-decoration: none;}
+a{
+	color: $color-blue;
+	text-decoration: underline;
+}
+
+a:hover{text-decoration: none;}
 
 p{
 	padding: 0;
@@ -51,7 +55,6 @@ h2,.h2{
 
 h3,.h3{
 	font-size: 2.4rem;
-	text-transform: uppercase;
 	margin-bottom: 1rem;
 }
 
@@ -71,6 +74,7 @@ ul{
 	li{
 		position: relative;
 		padding-left: 30px;
+		margin-bottom: 10px;
 	}
 
 	li:before{
@@ -102,19 +106,20 @@ main{
 	width: 100%;
 }
 
+.last-elem{margin-bottom: -76px;}
+
 .btn,
 input[type="submit"].btn,
 button.btn{
 	display: inline-block;
 	height: 6rem;
-	min-width: 200px;
 	border: none;
 	@include grad-blue;
 	@include font(normal, normal, 1.8rem, 5.8rem, #fff);
 	letter-spacing: 1px;
 	text-decoration: underline;
 	text-align: center;
-	padding: 0 30px;
+	padding: 0 35px;
 	cursor: pointer;
 	transition: all 0.2s ease 0s;
 }
@@ -138,7 +143,8 @@ button.btn_border{
 .btn_border:hover,
 input[type="submit"].btn_border:hover,
 button.btn_border:hover{
-	border-color: transparent;
+	line-height: 6rem;
+	border: 0;
 	@include grad-blue;
 }
 
@@ -175,7 +181,7 @@ button.btn_white:hover{
 input[type="submit"].btn_border.btn_white,
 button.btn_border.btn_white{
 	background: transparent;
-	border-color: #537cda;
+	border: 1px solid #537cda;
 	color: #fff;
 }
 
@@ -183,6 +189,7 @@ button.btn_border.btn_white{
 input[type="submit"].btn_border.btn_white:hover,
 button.btn_border.btn_white:hover{
 	background: #fff;
+	border: 1px solid #fff;
 	color: #2c2c2c;
 }
 
@@ -221,6 +228,9 @@ button.btn_border.btn_white:hover{
 .bg-grad-blue{
 	@include grad-blue;
 	color: #fff;
+
+	h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5{color: #fff;}
+	ul li::before{background: #fff;}
 }
 
 .bg-grey{background: #f5f5f5;}
@@ -228,4 +238,7 @@ button.btn_border.btn_white:hover{
 .bg-grey{
 	background: $color-blue;
 	color: #fff;
+
+	h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5{color: #fff;}
+	ul li::before{background: #fff;}
 }

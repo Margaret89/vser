@@ -1,0 +1,31 @@
+/*-------------- tabs-page -----------------*/
+.tabs-page{
+	&__list,
+	&__item{
+		@include reset-list;
+	}
+
+	&__item::before{display: none;}
+  
+	&__list{
+		display: flex;
+		margin-bottom: 56px;
+	}
+
+	&__item{
+		display: inline-block;
+		@include font(normal, normal, 1.8rem, 1.2, #616161);
+		cursor: pointer;
+		padding: 18px 25px;
+		background: #f6f6f6;
+		position: relative;
+	}
+  
+	&__item:hover,
+	&__item.active{
+		@include grad-blue;
+		color: #fff;
+	}
+
+	&__content-item{display: none;}
+}

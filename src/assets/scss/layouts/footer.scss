@@ -47,6 +47,11 @@
 	}
 
 	&__sub-link:hover{color: #fff;}
+
+	&__item::before,
+	&__sub-item::before{
+		display: none;
+	}
 }
 
 .footer-contact{
