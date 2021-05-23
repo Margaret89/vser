@@ -38,15 +38,15 @@ $(window).on('resize', function(){
 	}
 });
 
-
-// $(window).scroll(function(){
-// 	if($(this).scrollTop()>300){
-// 		$('.js-move-up').addClass('visible');
-// 	}else{
-// 		$('.js-move-up').removeClass('visible');
-// 	}
-// });
-// $('.js-move-up').click(function(){$('body,html').animate({scrollTop:0},800);return false;});
+// move-up
+$(window).on('scroll', function(){
+	if($(this).scrollTop()>300){
+		$('.js-move-up').addClass('visible');
+	}else{
+		$('.js-move-up').removeClass('visible');
+	}
+});
+$('.js-move-up').on('click', function(){$('body,html').animate({scrollTop:0},800);return false;});
 
 // Слайдер услуг
 if($('.js-services-slider').length){
@@ -287,5 +287,13 @@ if($('.js-btn-menu').length){
 		$('.js-mobile-menu').slideToggle(300);
 		$('.js-body').toggleClass('no-scroll');
 	});
-	
+}
+
+// Открыть/Закрыть пункты левого меню
+if($('.js-left-menu-arr').length){
+	$('.js-left-menu-arr').on('click',function(e) {
+		e.preventDefault();
+		$(this).toggleClass('active');
+		$(this).closest('.js-left-menu-link').siblings('.js-left-menu-sub').slideToggle(300);
+	});
 }

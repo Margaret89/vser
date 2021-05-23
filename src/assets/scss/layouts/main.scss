@@ -2,7 +2,7 @@ html,
 body{
 	background: #fff;
 	font-family: $font-site;
-	@include font(normal, normal, 10px, 1.6, $color-text);
+	@include font(normal, normal, 10px, 1.7, $color-text);
 	box-sizing:border-box;
 	height:100%;
 }
@@ -34,8 +34,12 @@ a:hover{text-decoration: none;}
 
 p{
 	padding: 0;
-	margin-bottom: 2rem;
+	margin-bottom: 3rem;
 }
+
+p + img{margin-top: 3.3rem;}
+img + p{margin-top: 6rem;}
+p + .btn{margin-top: 3rem;}
 
 h1,.h1,
 h2,.h2,
@@ -61,7 +65,7 @@ h2,.h2{
 
 h3,.h3{
 	font-size: 2.4rem;
-	margin-bottom: 1rem;
+	margin-bottom: 4rem;
 }
 
 h4,.h4{
@@ -301,12 +305,20 @@ button.btn_border.btn_white:hover{
 		margin-bottom: 2.6rem;
 	}
 
-	h3,.h3{font-size: 2rem;}
+	h3,.h3{
+		font-size: 2rem;
+		margin-bottom: 2.6rem;
+	}
+
 	h4,.h4{font-size: 1.8rem;}
 	h5,.h5{font-size: 1.6rem;}
 
 	p{margin-bottom: 2.5rem;}
 
-	main{padding-bottom: 40px;}	
+	p + img{margin-top: 1rem;}
+	img + p{margin-top: 3rem;}
+	p + .btn{margin-top: 2rem;}
+
+	main{padding-bottom: 40px;}
 	.last-elem{margin-bottom: -40px;}
 }

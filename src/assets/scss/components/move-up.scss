@@ -1,0 +1,35 @@
+/*-------------- move-up -----------------*/
+.move-up{
+	display: inline-flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 50px;
+	height: 50px;
+	background: $color-blue;
+	padding: 5px;
+	text-align: center;
+	position: fixed;
+	right: -100px;
+	bottom: 50px;
+	cursor: pointer;
+	opacity: 0;
+	transition: background 0.2s ease 0s,
+				right 0.3s ease 0s;
+
+	.icon{stroke: #fff;}
+
+	&:hover{background: #4f78d7;}
+
+	&.visible{
+		right: 50px;
+		opacity: 1;
+	}
+}
+
+@media (max-width: 767px) {
+	.move-up{
+		bottom: 20px;
+		&.visible{right: 20px;}
+	}
+}

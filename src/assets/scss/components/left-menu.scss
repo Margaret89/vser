@@ -1,0 +1,78 @@
+/*-------------- left-menu -----------------*/
+.left-menu{
+	&,
+	&__item,
+	&__sub,
+	&__sub-item{
+		@include reset-list;
+	}
+
+	&__item::before,
+	&__sub-item::before{
+		display: none;
+	}
+
+	&__link{
+		display: block;
+		@include grad-blue;
+		position: relative;
+		@include font(normal, normal, 1.6rem, 1.2, #fff);
+		text-decoration: none;
+		padding: 21px 40px 21px 30px;
+		position: relative;
+	}
+
+	&__arr{
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 20px;
+		height: 20px;
+		position: absolute;
+		top: 22px;
+		right: 15px;
+
+		.icon{
+			stroke: #fff;
+			transition: all 0.2s ease 0s;
+		}
+	}
+
+	&__arr.active .icon{transform: rotate(90deg);}
+	&__link:hover{@include grad-blue-reverse;}
+
+	&__sub{
+		display: none;
+		padding: 30px 22px;
+		background: #f4f4f4;
+	}
+
+	&__sub-item:not(:last-child){margin-bottom: 23px;}
+
+	&__sub-link{
+		display: block;
+		@include font(normal, 300, 1.6rem, 1.2, #000);
+		text-decoration: none;
+		transition: color 0.2s ease 0s;
+	}
+
+	&__sub-link:hover,
+	&__sub-item.active &__sub-link{
+		color: $color-blue;
+	}
+}
+
+@media (max-width: 767px) {
+	.left-menu{
+		margin-bottom: 40px;
+		
+		&__link{padding: 15px 40px 15px 20px;}
+
+		&__arr{
+			width: 40px;
+			height: 40px;
+			top: 5px;
+			right: 0;
+		}
+	}
+}
