@@ -1,0 +1,98 @@
+extends ../layout/main
+
+block variables
+	- var title = 'О нас';
+	- var h1 = 'О нас';
+
+block content
+	section.about-page
+		.container
+			.row
+				.col-12
+					.about-page__desc.clearfix
+						.about-page__img
+							img(src="assets/img/about-page.jpg", alt="")
+
+						p Основной деятельностью ООО «ВСЭР» является выполнение работ по строительству, реконструкции и ремонту объектов энергетики, капитального строительства, ЖКХ, промышленной инфраструктуры, монтажу теплоэнергетического и промышленного оборудования, в качестве генерального подрядчика, при этом основная часть работ выполняется собственными силами.
+						p ООО «Востокстройэнергоремонт» — динамично развивающееся предприятие, располагает производственными участками в Приморском и Камчатских крае, высококвалифицированным персоналом, имеющим многолетний опыт производства работ в профильных видах деятельности компании.
+						p Специалисты компании соответствующим образом аттестованы, согласно требованиям Ростехнадзора, в области строительства, реконструкции и ремонтов, имеют удостоверения по электробезопасности и производству сварочных работ. Благодаря накопленному опыту наших специалистов, применению современных технологий и оборудования Вам гарантировано качественное и своевременное выполнение работ.
+
+	section.docs-wrap
+		.container
+			.row
+				.col-12
+					.h2 Документы и сертификаты
+
+					.docs
+						-
+							var list=[
+								{img:'doc1.jpg', img_big:'doc1.jpg'},
+								{img:'doc2.jpg', img_big:'doc2.jpg'},
+								{img:'doc3.jpg', img_big:'doc-big3.jpg'},
+								{img:'doc4.jpg', img_big:'doc4.jpg'},
+								{img:'doc5.jpg', img_big:'doc5.jpg'},
+							]
+						each item in list
+							.docs__item
+								a(href='assets/img/'+item.img_big, data-fancybox='docs')
+									img(src='assets/img/'+item.img alt='')
+
+						.docs__more
+							a.btn.btn_border.btn_small(href='#')
+								span Показать все документы
+
+	section.map-block.last-elem
+		script(src='http://api-maps.yandex.ru/2.1/?lang=ru_RU' type='text/javascript')
+
+		.map-block__content
+			#map.map
+
+		.container
+			.row
+				.col-12
+					.map-block__info
+						h3 Контакты
+
+						.tabs-page.js-tabs-page
+							ul.tabs-page__list.js-tabs-page-list
+								li.tabs-page__item.js-tabs-page-item.js-map-item(data-item='tab1', data-coordx='43.126755' data-coordy='131.878086') Владивостокский производственный центр:
+								li.tabs-page__item.js-tabs-page-item.js-map-item(data-item='tab2', data-coordx='52.969485' data-coordy='158.684735') Камчатский производственный центр:
+
+							.tabs-page__content.js-tabs-page-content
+								#tab1.tabs-page__content-item.js-tabs-page-content-item.js-tabs-page-content-item
+									.contacts
+										.contacts__item
+											.contacts__icon
+												+svg('ic-call','ic-call', '17', '17')
+											.contacts__text
+												a(href="tel:+74232098541") +7(423)209-85-41
+
+										.contacts__item
+											.contacts__icon
+												+svg('ic-email','ic-email', '17', '13')
+											.contacts__text
+												a(href="mailto:vser@vser.ru") vser@vser.ru
+
+										.contacts__item
+											.contacts__icon
+												+svg('ic-address','ic-address', '15', '20')
+											.contacts__text 690090, г. Владивосток, ул. Западная 29 ст.2, оф. 416
+
+								#tab2.tabs-page__content-item.js-tabs-page-content-item.js-tabs-page-content-item
+									.contacts
+										.contacts__item
+											.contacts__icon
+												+svg('ic-call','ic-call', '17', '17')
+											.contacts__text
+												a(href="tel:+79146233099") +7(914)623 30 99
+
+										.contacts__item
+											.contacts__icon
+												+svg('ic-email','ic-email', '17', '13')
+											.contacts__text
+												a(href="mailto:vser@vser.ru") vser@vser.ru
+
+										.contacts__item
+											.contacts__icon
+												+svg('ic-address','ic-address', '15', '20')
+											.contacts__text 683030, г. Петропавловск-Камчатский, ул. Сахалинская, 28

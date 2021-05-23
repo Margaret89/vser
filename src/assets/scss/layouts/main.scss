@@ -266,6 +266,12 @@ button.btn_border.btn_white:hover{
 	}
 }
 
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+  }
+
 @media (max-width: 991px) {
 	.btn_big,
 	input[type="submit"].btn_big,
