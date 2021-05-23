@@ -1,0 +1,86 @@
+/*-------------- select -----------*/
+
+// select{width: 1px!important;}
+	// 
+
+	// .select2-container .select2-selection--single,
+	// .select2-container--default .select2-selection--single .select2-selection__rendered{
+	// 	height: 4rem;
+	// 	width: 100%;
+	// 	font-size: 1.6rem;
+	// 	line-height: 3.8rem;
+	// 	color: $color-text;
+	// }
+
+	// .select2-container--default .select2-selection--single .select2-selection__rendered{padding-left: 23px;}
+
+.select2{width: 262px!important;}
+
+.select2-container .select2-selection--single{
+	display: block;
+	vertical-align: top;
+	height: 5rem;
+	width: 100%;
+	font-family: $font-site;
+	@include font(normal, normal, 1.5rem, 4.8rem, $color-text);
+	padding: 0 30px;
+	border-radius: 0;
+	border: 1px solid #cdcdcd;
+	outline: 0;
+	margin: 0;
+	background: #fff;
+	box-shadow: none;
+	transition: border 0.2s ease 0s;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered{
+	@include font(normal, normal, 1.5rem, 4.8rem, $color-text);
+}
+
+.select2-container .select2-selection--single .select2-selection__rendered{padding: 0;}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow{
+	height: 100%;
+	width: 30px;
+	text-align: center;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow b{
+	display: inline-block;
+	width: 7px;
+	height: 14px;
+	background: transparent url(../img/ic-arrow-right.png) no-repeat center;
+	background-size: contain;
+	border: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b{
+	border: 0;
+	transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.select2-dropdown{
+	max-width: none;
+	background: #fff;
+	border: #ecedee;
+	border-radius: 0;
+	margin-top: 0;
+	padding: 0;
+	@include font(normal, normal, 15px, 1.2, $color-text);
+	box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.15);
+	white-space: nowrap;
+	z-index: 100000;
+}
+
+.select2-container--default .select2-results__option{padding: 10px;}
+.select2-results li{margin-bottom: 0;}
+
+.select2-container--default .select2-results__option[aria-selected=true],
+.select2-container--default .select2-results__option--highlighted[aria-selected]{
+	background: $color-blue;
+	color: #fff;
+}

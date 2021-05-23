@@ -1,0 +1,67 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Наши работы';
+	- var h1 = 'Наши работы';
+
+block content
+	section.works-page
+		.container
+			.row
+				.col-12
+					.sort
+						.sort__item
+							.sort__label Виды выполненных работ
+
+							select.js-select(data-placeholder="Выберите вид работ")
+								option
+								option(value="Вариант 1") Вариант 1
+								option(value="Вариант 2") Вариант 2
+								option(value="Вариант 3") Вариант 3
+								option(value="Вариант 4") Вариант 4
+								option(value="Вариант 5") Вариант 5
+						
+						.sort__item
+							.sort__label Выберите регион
+
+							select.js-select(data-placeholder="Все")
+								option
+								option(value="Елизово") Елизово
+								option(value="Вилючинск") Вилючинск
+								option(value="Вариант 3") Вариант 3
+								option(value="Вариант 4") Вариант 4
+								option(value="Вариант 5") Вариант 5
+
+			.work-list
+				.row
+					-
+						var list=[
+							{img:'work1.jpg', title:'Условное название объекта', address:'Камчатский край, Елизово', text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nibh consectetur phasellus aenean placerat turpis tristique vulputate. Morbi molestie habitant sed orci eget pellentesque. Pharetra, diam, faucibus sit at aliquam, at fringilla praesent. Accumsan pretium id ornare donec rhoncus enim etiam pulvinar. Vitae tempor enim elementum proin ut.'},
+							{img:'work2.jpg', title:'Условное название объекта. Длинное название в 2 строки', address:'Камчатский край, Вилючинск', text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nibh consectetur phasellus aenean placerat turpis tristique vulputate. Morbi molestie habitant sed orci eget pellentesque. Pharetra, diam, faucibus sit at aliquam, at fringilla praesent. Accumsan pretium id ornare donec rhoncus enim etiam pulvinar. Vitae tempor enim elementum proin ut. Cursus turpis mi enim, ullamcorper eget ac. Purus massa cursus fermentum integer et sed.'},
+							{img:'work3.jpg', title:'Условное название объекта', address:'Камчатский край, Петропавловск-Камчатский', text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nibh consectetur phasellus aenean placerat turpis tristique vulputate. Morbi molestie habitant sed orci eget pellentesque. Pharetra, diam, faucibus sit at aliquam, at fringilla praesent.'},
+							{img:'work4.jpg', title:'Условное название объекта', address:'Камчатский край, Елизово', text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nibh consectetur phasellus aenean placerat turpis tristique vulputate. Morbi molestie habitant sed orci eget pellentesque. Pharetra, diam, faucibus sit at aliquam, at fringilla praesent. Accumsan pretium id ornare donec rhoncus enim etiam pulvinar. Vitae tempor enim elementum proin ut.'},
+							{img:'work5.jpg', title:'Условное название объекта. Длинное название в 2 строки', address:'Камчатский край, Вилючинск', text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nibh consectetur phasellus aenean placerat turpis tristique vulputate. Morbi molestie habitant sed orci eget pellentesque. Pharetra, diam, faucibus sit at aliquam, at fringilla praesent. Accumsan pretium id ornare donec rhoncus enim etiam pulvinar. Vitae tempor enim elementum proin ut. Cursus turpis mi enim, ullamcorper eget ac. Purus massa cursus fermentum integer et sed.'},
+							{img:'work6.jpg', title:'Условное название объекта', address:'Камчатский край, Петропавловск-Камчатский', text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nibh consectetur phasellus aenean placerat turpis tristique vulputate. Morbi molestie habitant sed orci eget pellentesque. Pharetra, diam, faucibus sit at aliquam, at fringilla praesent.'},
+							{img:'work1.jpg', title:'Условное название объекта', address:'Камчатский край, Елизово', text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nibh consectetur phasellus aenean placerat turpis tristique vulputate. Morbi molestie habitant sed orci eget pellentesque. Pharetra, diam, faucibus sit at aliquam, at fringilla praesent. Accumsan pretium id ornare donec rhoncus enim etiam pulvinar. Vitae tempor enim elementum proin ut.'},
+							{img:'work2.jpg', title:'Условное название объекта. Длинное название в 2 строки', address:'Камчатский край, Вилючинск', text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nibh consectetur phasellus aenean placerat turpis tristique vulputate. Morbi molestie habitant sed orci eget pellentesque. Pharetra, diam, faucibus sit at aliquam, at fringilla praesent. Accumsan pretium id ornare donec rhoncus enim etiam pulvinar. Vitae tempor enim elementum proin ut. Cursus turpis mi enim, ullamcorper eget ac. Purus massa cursus fermentum integer et sed.'},
+							{img:'work3.jpg', title:'Условное название объекта', address:'Камчатский край, Петропавловск-Камчатский', text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nibh consectetur phasellus aenean placerat turpis tristique vulputate. Morbi molestie habitant sed orci eget pellentesque. Pharetra, diam, faucibus sit at aliquam, at fringilla praesent.'},
+						]
+
+					each item in list
+						.col-sm-6.col-lg-4
+							.work-item
+								a(href="#").work-item__img-wrap
+									span.work-item__img(style="background-image: url(assets/img/"+item.img+")")
+
+								.work-item__title
+									a(href="#")= item.title
+
+								.work-item__address= item.address
+
+								.work-item__text= item.text
+
+				.row
+					.col-12
+						.work-list__more
+							a.btn.btn_border.btn_small(href='#')
+								span Показать больше отзывов

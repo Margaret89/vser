@@ -1,0 +1,40 @@
+/*-------------- sort -----------------*/
+.sort{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin-bottom: 70px;
+
+	&__item{
+		display: inline-flex;
+		align-items: center;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+
+	&__item:not(:last-child){margin-right: 30px;}
+
+	&__label{
+		@include font(normal, normal, 1.8rem, 1.2, $color-text);
+		margin-right: 60px;
+	}
+}
+
+@media (max-width: 1229px) {
+	.sort{
+		&__label{margin-right: 15px;}
+	}
+}
+
+@media (max-width: 767px) {
+	.sort{
+		margin-bottom: 30px;
+		
+		&__item{display: block;}
+
+		&__label{
+			margin-right: 0;
+			margin-bottom: 10px;
+		}
+	}
+}

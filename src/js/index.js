@@ -297,3 +297,14 @@ if($('.js-left-menu-arr').length){
 		$(this).closest('.js-left-menu-link').siblings('.js-left-menu-sub').slideToggle(300);
 	});
 }
+
+// custom select
+if ($('.js-select').length) {
+	$('.js-select').select2({
+		width: '100%',
+		minimumResultsForSearch: Infinity,
+		placeholder: function(){
+			$(this).attr('data-placeholder');
+		},
+	});
+}
