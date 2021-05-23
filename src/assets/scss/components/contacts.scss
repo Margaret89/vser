@@ -1,4 +1,8 @@
 /*-------------- contacts -----------------*/
+.contacts-wrap{
+
+}
+
 .contacts{
 	&__item{display: flex;}
 	&__item:not(:last-child){margin-bottom: 30px;}
@@ -17,11 +21,92 @@
 	&__text{
 		@include font(normal, normal, 1.8rem, 1.4, $color-text);
 	}
+
+	&__title{
+		font-family: $font-ubuntu;
+		@include font(normal, 300, 2.4rem, 1.5, $color-text);
+		margin-bottom: 70px;
+	}
+}
+
+.contacts-list{
+	&__sect{position: relative;}
+	.col-12{position: static;}
+
+	&__row{
+		display: flex;
+		flex-wrap: wrap;
+		margin-left: -15px;
+		margin-right: -15px;
+	}
+
+	.contacts{
+		width: calc(50% - 30px);
+		margin: 0 15px 30px;
+
+		&__title,
+		&__text{
+			max-width: 350px;
+		}
+
+		&__map{
+			padding-bottom: 500px;
+			margin-top: 40px;
+
+			.map-contact{
+				width: 50%;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+			}
+		}
+	}
+
+	.contacts:nth-child(2) .contacts__map .map-contact{left: 50%;}
+}
+
+.map-contact{
+	height: 500px;
 }
 
 @media (max-width: 767px) {
 	.contacts{
 		&__text{font-size: 1.5rem;}
 		&__item:not(:last-child){margin-bottom: 20px;}
+
+		&__title{
+			font-size: 2rem;
+			margin-bottom: 30px;
+		}
+	}
+
+	.contacts-list{
+		&__row{
+			display: block;
+			margin-left: 0;
+			margin-right: 0;
+		}
+
+		.contacts{
+			width: 100%;
+			margin: 0;
+
+			&:not(:last-child){margin-bottom: 60px;}
+
+			&__map{
+				padding: 0;
+				margin-left: -20px;
+				margin-right: -20px;
+
+				.map-contact{
+					width: auto;
+					position: static;
+				}
+			}
+		}
+	}
+
+	.map-contact{
+		height: 360px;
 	}
 }

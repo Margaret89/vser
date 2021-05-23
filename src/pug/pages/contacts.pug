@@ -1,0 +1,63 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Главная';
+	- var h1 = 'Контакты';
+
+block content
+	section.contacts-wrap.last-elem
+		script(src='http://api-maps.yandex.ru/2.1/?lang=ru_RU' type='text/javascript')
+
+		.contacts-list
+			.contacts-list__sect
+				.container
+					.row
+						.col-12
+							.contacts-list__row
+								.contacts
+									.contacts__title Владивостокский производственный центр:
+
+									.contacts__item
+										.contacts__icon
+											+svg('ic-call','ic-call', '17', '17')
+										.contacts__text
+											a(href="tel:+74232098541") +7(423)209-85-41
+											br
+											a(href="tel:+74232392540") +7(423)239-25-40
+
+									.contacts__item
+										.contacts__icon
+											+svg('ic-email','ic-email', '17', '13')
+										.contacts__text
+											a(href="mailto:vser@vser.ru") vser@vser.ru
+
+									.contacts__item
+										.contacts__icon
+											+svg('ic-address','ic-address', '15', '20')
+										.contacts__text 690090, г. Владивосток, ул. Западная 29 ст.2, оф. 416
+
+									.contacts__map
+										#map-contact1.map-contact.js-map-contact(data-id="1", data-coordx='43.126755', data-coordy='131.878086')
+
+								.contacts
+									.contacts__title  Камчатский производственный центр:
+
+									.contacts__item
+										.contacts__icon
+											+svg('ic-call','ic-call', '17', '17')
+										.contacts__text
+											a(href="tel:+79146233099") +7(914)623 30 99
+
+									.contacts__item
+										.contacts__icon
+											+svg('ic-email','ic-email', '17', '13')
+										.contacts__text
+											a(href="mailto:vser@vser.ru") vser@vser.ru
+
+									.contacts__item
+										.contacts__icon
+											+svg('ic-address','ic-address', '15', '20')
+										.contacts__text 683030, г. Петропавловск-Камчатский, ул. Сахалинская, 28
+									
+									.contacts__map
+										#map-contact2.map-contact.js-map-contact(data-id="2", data-coordx='52.969485', data-coordy='158.684735')

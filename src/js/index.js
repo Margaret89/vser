@@ -152,7 +152,7 @@ if($('.js-partner-slider').length){
 	});
 }
 
-// Yandex карта
+// Yandex карта на главной
 if ($('#map').length) {
 	// Иницилизация карты
 	ymaps.ready(init);
@@ -187,6 +187,36 @@ if ($('#map').length) {
 			var curCenterMapY = $(this).data('coordy')-0.005;
 
 			myMap.panTo([curCenterMapX, curCenterMapY]);
+		});
+	}
+}
+
+// Yandex карта в контактах
+if ($('.js-map-contact').length) {
+	// Иницилизация карты
+	ymaps.ready(init);
+
+	function init(){
+		var myMap;
+
+		$('.js-map-contact').each(function() {
+			var coordx = $(this).data('coordx');
+			var coordy = $(this).data('coordy');
+			var idElem =  $(this).data('id');
+
+			myMap = new ymaps.Map("map-contact"+idElem, {
+				center: [coordx, coordy],
+				zoom: 15,
+				controls: []
+			});
+
+			var myPlacemark = new ymaps.Placemark([coordx, coordy] , {},
+			{ iconLayout: 'default#image',
+			iconImageHref: 'assets/img/mark-map.png',
+			iconImageSize: [50, 65],
+			iconImageOffset: [-25, -65] });
+
+			myMap.geoObjects.add(myPlacemark);
 		});
 	}
 }

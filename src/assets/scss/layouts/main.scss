@@ -250,6 +250,18 @@ button.btn_border.btn_white:hover{
 	ul li::before{background: #fff;}
 }
 
+.page-title{
+	padding: 30px 0 37px;
+	@include grad-blue;
+	margin-bottom: 60px;
+	color: #fff;
+
+	h1, .h1{
+		margin-bottom: 0;
+		color: #fff;
+	}
+}
+
 @media (max-width: 991px) {
 	.btn_big,
 	input[type="submit"].btn_big,
@@ -297,5 +309,4 @@ button.btn_border.btn_white:hover{
 
 	main{padding-bottom: 40px;}	
 	.last-elem{margin-bottom: -40px;}
-	
 }
