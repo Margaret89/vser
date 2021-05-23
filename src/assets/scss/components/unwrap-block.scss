@@ -1,0 +1,55 @@
+/*-------------- unwrap-block -----------------*/
+.unwrap-block{
+	&__head{
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		@include grad-blue;
+		@include font(normal, normal, 2rem, 1.3, #fff);
+		padding: 19px 17px 15px 50px;
+		position:relative;
+		cursor:pointer;
+	}
+
+	&__action{
+		display: inline-flex;
+		align-items: center;
+		margin-left: 20px;
+		padding-top: 5px;
+	}
+
+	&__btn-label{
+		@include font(normal, normal, 1.5rem, 1.2, #fff);
+		margin-right: 28px;
+	}
+
+	&__btn{
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		flex: 0 0 20px;
+		width: 20px;
+		height: 20px;
+		
+		.icon{
+			stroke: #fff;
+			transition: transform 0.2s ease 0s;
+		}
+	}
+
+	&.opened .icon{transform: rotate(90deg);}
+
+	&__head:hover{
+		@include grad-blue-reverse;
+	}
+
+	&__content{
+		display: none;
+		padding: 20px 0;
+
+		p:last-child{margin-bottom: 0;}
+
+		.design-table:first-child{margin-top: -20px;}
+		.design-table:last-child{margin-bottom: -20px;}
+	}
+}
